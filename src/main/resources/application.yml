@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: courses
+  datasource:
+    url: jdbc:mysql://localhost:3306/VLSDB?useSSL=false
+    username: matlab
+    password: matlab
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hbm2ddl:
+          auto: update
+        format_sql: true
+    show-sql: true
+
+#logging.level: org.springframework.security=debug
+
+user.login: matlab
+user.password: password
+user.role: admin
+user.link: /api/v1/courses/**

@@ -1,0 +1,44 @@
+# curl --location --request GET 'http://localhost:8080/api/v1/courses' 
+#--header 'Authorization: Basic bWF0bGFiOnBhc3N3b3Jk'
+### Get all Courses
+GET http://localhost:8080/api/v1/courses
+Authorization: Basic bWF0bGFiOnBhc3N3b3Jk
+
+###  Create a course
+POST http://localhost:8080/api/v1/courses
+Authorization: Basic bWF0bGFiOnBhc3N3b3Jk
+Content-Type: application/json
+
+{
+  "courseName": "Math",
+  "author": "Subbu",
+  "duration": 25,
+  "availability": true
+}
+
+### Delete Course
+# curl --location --request DELETE 'http://localhost:8080/api/v1/courses/1'
+#--header 'Authorization: Basic bWF0bGFiOnBhc3N3b3Jk'
+DELETE http://localhost:8080/api/v1/courses/1
+Authorization: Basic bWF0bGFiOnBhc3N3b3Jk
+
+### Get by Author
+# curl --location --request GET 'http://localhost:8080/api/v1/courses/findbyauthor/sub'
+#--header 'Authorization: Basic bWF0bGFiOnBhc3N3b3Jk'
+GET http://localhost:8080/api/v1/courses/findbyauthor/sub
+Authorization: Basic bWF0bGFiOnBhc3N3b3Jk
+
+### Get by CourseName
+# curl --location --request GET 'http://localhost:8080/api/v1/courses/findbycoursename/Math'
+#--header 'Authorization: Basic bWF0bGFiOnBhc3N3b3Jk'
+GET http://localhost:8080/api/v1/courses/findbycoursename/Math
+Authorization: Basic bWF0bGFiOnBhc3N3b3Jk
+
+###
+
+
+
+
+
+
+
